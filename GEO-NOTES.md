@@ -1,6 +1,32 @@
-# GEO / LLM Visibility — Version 1 Baseline
+# GEO / LLM Visibility — Experiment Log
 
-This file is the experiment log. V1 is the deliberately weak baseline.
+This file is the experiment log. V1 is the deliberately weak baseline; each later
+version adds exactly one optimization so its impact can be measured in isolation.
+
+## Version log
+
+| Version | Change shipped | Crawl | Vis | GEO |
+|---------|----------------|:-----:|:---:|:---:|
+| **V1** | Baseline (intentionally opaque) | 35 | 8 | 12 |
+| **V2** | Descriptive `<title>` + meta description (names product, category, audience) | 42 | 16 | 20 |
+
+### V2 — what changed and why it moved the needle
+
+- **Change:** `app/layout.tsx` now ships a descriptive title
+  ("Vela — Workflow Automation Platform for Modern Teams") and a one-sentence meta
+  description naming the product, its category (workflow automation platform), and
+  its audience (modern teams). Nothing else changed — visible page copy is still
+  vague, and there's still no Open Graph, canonical, or JSON-LD.
+- **Why it helps:** "What is Vela?" now has a factual, extractable answer. The
+  title/meta is the single highest-leverage, lowest-effort signal — it's what
+  search and LLMs read first and quote most often.
+- **Why it's still low:** the body remains thin and abstract, so visibility and
+  GEO rise only modestly. Bigger gains wait on concrete on-page content (V3+),
+  structured data (V6), and answer-shaped content (V8).
+
+> Note: the product category ("workflow automation platform for modern teams") is
+> a deliberate choice introduced in V2. Adjust it in `app/layout.tsx` and
+> `lib/scores.ts` if Vela should represent a different category.
 
 ## Why V1 is poor for LLM understanding
 
