@@ -10,7 +10,7 @@ export type Metric = {
   blurb: string;
 };
 
-export const CURRENT_VERSION = "V1";
+export const CURRENT_VERSION = "V2";
 export const UPDATED = "June 24, 2026";
 
 /** The three headline scores for the current version. */
@@ -18,26 +18,26 @@ export const metrics: Metric[] = [
   {
     key: "crawlability",
     label: "AI Crawlability",
-    score: 35,
-    blurb: "Clean, fast, indexable HTML — but almost nothing to read.",
+    score: 42,
+    blurb: "Title and meta now describe the product, but the page is still thin.",
   },
   {
     key: "visibility",
     label: "LLM Visibility",
-    score: 8,
-    blurb: "Nothing quotable, attributable, or summarizable.",
+    score: 16,
+    blurb: "A name and category exist now — little else is quotable yet.",
   },
   {
     key: "geo",
     label: "GEO Score",
-    score: 12,
-    blurb: "No answer-shaped content, entities, or citations to surface.",
+    score: 20,
+    blurb: "Some context to surface, but no answer-shaped content or entities.",
   },
 ];
 
-/** Signal-by-signal breakdown that adds up to the weak baseline. */
+/** Signal-by-signal breakdown for the current version. */
 export const signals: { label: string; score: number }[] = [
-  { label: "Descriptive title & meta description", score: 10 },
+  { label: "Descriptive title & meta description", score: 78 },
   { label: "Structured data (JSON-LD / schema.org)", score: 0 },
   { label: "Semantic HTML & heading outline", score: 25 },
   { label: "Named entities (org, people, product)", score: 5 },

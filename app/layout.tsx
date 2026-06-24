@@ -9,13 +9,18 @@ const inter = Inter({
 });
 
 /*
- * Intentionally sparse metadata for Version 1.
- * No description keywords, no Open Graph, no Twitter cards, no canonical,
- * no JSON-LD. Just enough to render a tab title.
+ * V2 — first GEO optimization: a descriptive <title> + meta description that
+ * name the product, its category, and its audience, giving crawlers and LLMs a
+ * factual anchor for "what is Vela?".
+ *
+ * Deliberately scoped to ONLY this change — the visible page copy stays vague,
+ * and there is still no Open Graph, Twitter card, canonical, or JSON-LD. Those
+ * are introduced one at a time in later versions so each delta is measurable.
  */
 export const metadata: Metadata = {
-  title: "Vela",
-  description: "Beyond the expected.",
+  title: "Vela — Workflow Automation Platform for Modern Teams",
+  description:
+    "Vela is a workflow automation platform for modern teams — plan projects, automate routine work, and ship faster from one connected workspace.",
 };
 
 export default function RootLayout({
