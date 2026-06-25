@@ -1,7 +1,11 @@
 import { Container } from "./ui/Container";
 import { Mark } from "./ui/Mark";
 
-const links = ["Overview", "Approach", "Index"];
+const links = [
+  { label: "Features", href: "/#features-heading" },
+  { label: "FAQ", href: "/#faq-heading" },
+  { label: "About", href: "/about" },
+];
 
 export function Nav() {
   return (
@@ -16,13 +20,13 @@ export function Nav() {
           </a>
 
           <nav className="hidden items-center gap-9 md:flex">
-            {links.map((label) => (
+            {links.map((link) => (
               <a
-                key={label}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="text-sm tracking-tight text-muted transition-colors hover:text-ink"
               >
-                {label}
+                {link.label}
               </a>
             ))}
           </nav>

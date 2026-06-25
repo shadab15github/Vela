@@ -1,11 +1,31 @@
 import { Container } from "./ui/Container";
 import { Mark } from "./ui/Mark";
 
-/* Vague link clusters. No address, no contact, no entity detail. */
+/* Real navigation clusters with destinations and entity links. */
 const groups = [
-  { heading: "Surface", links: ["Overview", "Approach", "Index"] },
-  { heading: "Motion", links: ["Signal", "Drift", "Echo"] },
-  { heading: "Beyond", links: ["Horizon", "Threshold", "Elsewhere"] },
+  {
+    heading: "Product",
+    links: [
+      { label: "Features", href: "/#features-heading" },
+      { label: "FAQ", href: "/#faq-heading" },
+      { label: "Get started", href: "/" },
+    ],
+  },
+  {
+    heading: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "mailto:hello@vela.com" },
+    ],
+  },
+  {
+    heading: "Connect",
+    links: [
+      { label: "X / Twitter", href: "https://twitter.com/vela" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/vela" },
+      { label: "GitHub", href: "https://github.com/vela" },
+    ],
+  },
 ];
 
 export function Footer() {
@@ -21,7 +41,8 @@ export function Footer() {
               </span>
             </a>
             <p className="mt-4 max-w-[16rem] text-sm leading-relaxed text-muted">
-              Designed for what comes next.
+              Workflow automation for modern teams. Automate the busywork, ship
+              the real work.
             </p>
           </div>
 
@@ -32,12 +53,12 @@ export function Footer() {
               </div>
               <ul className="mt-4 space-y-3">
                 {group.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm tracking-tight text-muted transition-colors hover:text-ink"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}

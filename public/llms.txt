@@ -10,6 +10,7 @@ hand-offs. A free plan is available with no credit card required.
 ## Pages
 
 - [Home](https://www.vela.com/): Product overview, features, and FAQ.
+- [About](https://www.vela.com/about): Team, mission, company facts, and contact.
 
 ## Features
 

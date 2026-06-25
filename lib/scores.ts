@@ -10,7 +10,7 @@ export type Metric = {
   blurb: string;
 };
 
-export const CURRENT_VERSION = "V9";
+export const CURRENT_VERSION = "V10";
 export const UPDATED = "June 24, 2026";
 
 /** The three headline scores for the current version. */
@@ -18,35 +18,35 @@ export const metrics: Metric[] = [
   {
     key: "crawlability",
     label: "AI Crawlability",
-    score: 84,
-    blurb: "robots.txt, sitemap.xml, and llms.txt give crawlers a clear map.",
+    score: 88,
+    blurb: "An About page adds a crawlable entity hub with team and contact.",
   },
   {
     key: "visibility",
     label: "LLM Visibility",
-    score: 72,
-    blurb: "llms.txt hands models a concise, structured summary of the product.",
+    score: 80,
+    blurb: "Founders, location, and contact are strong E-E-A-T entity signals.",
   },
   {
     key: "geo",
     label: "GEO Score",
-    score: 78,
-    blurb: "Discoverability directives ensure the good content actually gets read.",
+    score: 84,
+    blurb: "A real organization entity makes Vela far easier to attribute.",
   },
 ];
 
 /** Signal-by-signal breakdown for the current version. */
 export const signals: { label: string; score: number }[] = [
   { label: "Descriptive title & meta description", score: 88 },
-  { label: "Structured data (JSON-LD / schema.org)", score: 85 },
+  { label: "Structured data (JSON-LD / schema.org)", score: 88 },
   { label: "Semantic HTML & heading outline", score: 85 },
-  { label: "Named entities (org, people, product)", score: 58 },
+  { label: "Named entities (org, people, product)", score: 85 },
   { label: "Answer-shaped content (FAQ / Q&A)", score: 85 },
   { label: "Open Graph & social metadata", score: 75 },
   { label: "Crawl directives (robots / sitemap / llms.txt)", score: 90 },
   { label: "Citations & external corroboration", score: 0 },
   { label: "Image alt text & captions", score: 5 },
-  { label: "Content depth & freshness", score: 70 },
+  { label: "Content depth & freshness", score: 78 },
 ];
 
 /** Forward-looking projection: one optimization added per version. */

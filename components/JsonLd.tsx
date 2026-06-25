@@ -18,6 +18,29 @@ const graph = {
       url: SITE_URL,
       description: "Maker of Vela, a workflow automation platform for teams.",
       slogan: "Automate the busywork. Ship the real work.",
+      foundingDate: "2024",
+      founders: [
+        { "@type": "Person", name: "Maya Chen" },
+        { "@type": "Person", name: "Daniel Okafor" },
+        { "@type": "Person", name: "Priya Nair" },
+      ],
+      numberOfEmployees: "30+",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "San Francisco",
+        addressRegion: "CA",
+        addressCountry: "US",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "hello@vela.com",
+      },
+      sameAs: [
+        "https://twitter.com/vela",
+        "https://www.linkedin.com/company/vela",
+        "https://github.com/vela",
+      ],
     },
     {
       "@type": "WebSite",
