@@ -13,6 +13,7 @@ version adds exactly one optimization so its impact can be measured in isolation
 | **V4** | Semantic HTML — landmarks, single H1, complete H2/H3 outline, list & `dl` markup, skip link | 56 | 34 | 38 |
 | **V5** | Open Graph + Twitter cards + canonical URL (`metadataBase`, `alternates.canonical`) | 60 | 38 | 42 |
 | **V6** | JSON-LD `@graph` — Organization + WebSite + SoftwareApplication entities | 68 | 48 | 54 |
+| **V7** | Real feature descriptions — concrete capabilities, named tools, and use cases | 72 | 56 | 62 |
 
 ### V2 — what changed and why it moved the needle
 

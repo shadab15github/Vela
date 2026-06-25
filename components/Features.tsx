@@ -1,14 +1,38 @@
 import { Container } from "./ui/Container";
 import { Glyph } from "./ui/Glyph";
 
-/* Six "features" that name a feeling, never a function. */
+/* Real, benefit-led descriptions of what Vela actually does. */
 const items = [
-  { glyph: "spark", title: "Considered", body: "Shaped with intent, refined without the noise." },
-  { glyph: "orbit", title: "Adaptive", body: "It moves the moment things move." },
-  { glyph: "layers", title: "Effortless", body: "Less to hold onto, more to feel." },
-  { glyph: "pulse", title: "In tune", body: "Always close to wherever you are." },
-  { glyph: "compass", title: "Open-ended", body: "Room enough to go any direction." },
-  { glyph: "prism", title: "Quietly capable", body: "More underneath than it lets on." },
+  {
+    glyph: "spark",
+    title: "Automations",
+    body: "Trigger actions across your tools the moment a task changes status — no manual hand-offs.",
+  },
+  {
+    glyph: "orbit",
+    title: "One workspace",
+    body: "Projects, tasks, and docs live in one place and stay in sync for the whole team.",
+  },
+  {
+    glyph: "layers",
+    title: "Integrations",
+    body: "Connect Slack, GitHub, Google Workspace, and the tools you already use in a few clicks.",
+  },
+  {
+    glyph: "pulse",
+    title: "Real-time updates",
+    body: "Everyone sees changes the instant a teammate makes them, on every device.",
+  },
+  {
+    glyph: "compass",
+    title: "Workflow templates",
+    body: "Start from proven workflows for sprints, launches, and reviews — or build your own.",
+  },
+  {
+    glyph: "prism",
+    title: "Insights",
+    body: "Dashboards show where work stands, what's blocked, and what needs attention next.",
+  },
 ];
 
 export function Features() {
@@ -23,11 +47,11 @@ export function Features() {
             id="features-heading"
             className="text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl"
           >
-            Built around possibility.
+            Everything your team needs to automate the work.
           </h2>
           <p className="mt-4 text-balance text-lg leading-relaxed text-muted">
-            A handful of qualities, held loosely. Each one leaves space for the
-            next.
+            Vela connects your tools, automates the routine steps between them,
+            and keeps everyone working from the same source of truth.
           </p>
         </div>
 
