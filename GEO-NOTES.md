@@ -17,6 +17,7 @@ version adds exactly one optimization so its impact can be measured in isolation
 | **V8** | FAQ section + FAQPage schema — answer-shaped Q&A, fully crawlable via native `details` | 78 | 66 | 74 |
 | **V9** | Crawl directives — `robots.txt`, `sitemap.xml`, and `llms.txt` (LLM content manifest) | 84 | 72 | 78 |
 | **V10** | About / entity page — team, mission, founders, location, contact + Organization/AboutPage schema | 88 | 80 | 84 |
+| **V11** | Alt text + captions + generated OG/Twitter image asset (`opengraph-image`, `figcaption`, `aria-label`) | 91 | 84 | 87 |
 
 ### V2 — what changed and why it moved the needle
 

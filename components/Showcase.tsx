@@ -9,14 +9,18 @@ export function Showcase() {
         <h2 id="showcase-heading" className="sr-only">
           Inside the Vela workspace
         </h2>
-        <div className="relative mx-auto max-w-5xl">
+        <figure className="relative mx-auto my-0 max-w-5xl">
           {/* soft glow behind the frame */}
           <div
             aria-hidden
             className="absolute -inset-x-8 -top-8 bottom-0 -z-10 rounded-[2.5rem] aurora opacity-70 blur-2xl"
           />
 
-          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_40px_90px_-40px_rgba(10,10,30,0.3)]">
+          <div
+            role="img"
+            aria-label="The Vela workspace showing a project board with automated workflows, tasks, and a live activity feed in one view."
+            className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_40px_90px_-40px_rgba(10,10,30,0.3)]"
+          >
             {/* window chrome */}
             <div className="flex items-center gap-2 border-b border-black/5 px-5 py-3.5">
               <span className="h-3 w-3 rounded-full bg-black/10" />
@@ -62,7 +66,10 @@ export function Showcase() {
           </div>
 
           {/* floating accent card for depth */}
-          <div className="absolute -bottom-7 right-4 hidden w-56 rotate-[-2deg] rounded-xl border border-black/10 bg-white/90 p-4 shadow-[0_24px_60px_-24px_rgba(10,10,30,0.35)] backdrop-blur sm:block">
+          <div
+            aria-hidden
+            className="absolute -bottom-7 right-4 hidden w-56 rotate-[-2deg] rounded-xl border border-black/10 bg-white/90 p-4 shadow-[0_24px_60px_-24px_rgba(10,10,30,0.35)] backdrop-blur sm:block"
+          >
             <div className="flex items-center gap-3">
               <div className="h-9 w-9 shrink-0 rounded-full bg-gradient-to-br from-violet-300 to-sky-300" />
               <div className="flex-1">
@@ -71,7 +78,12 @@ export function Showcase() {
               </div>
             </div>
           </div>
-        </div>
+
+          <figcaption className="mt-8 text-center text-sm leading-relaxed text-muted">
+            A look inside the Vela workspace — projects, automated workflows, and
+            live activity in one connected view.
+          </figcaption>
+        </figure>
       </Container>
     </section>
   );
