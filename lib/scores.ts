@@ -10,7 +10,7 @@ export type Metric = {
   blurb: string;
 };
 
-export const CURRENT_VERSION = "V7";
+export const CURRENT_VERSION = "V8";
 export const UPDATED = "June 24, 2026";
 
 /** The three headline scores for the current version. */
@@ -18,35 +18,35 @@ export const metrics: Metric[] = [
   {
     key: "crawlability",
     label: "AI Crawlability",
-    score: 72,
-    blurb: "Feature copy now names real capabilities, tools, and use cases.",
+    score: 78,
+    blurb: "Q&A pairs add dense, parseable content with a matching schema.",
   },
   {
     key: "visibility",
     label: "LLM Visibility",
-    score: 56,
-    blurb: "Specific, benefit-led text gives LLMs concrete claims to quote.",
+    score: 66,
+    blurb: "Answer-shaped content is exactly what LLMs lift into responses.",
   },
   {
     key: "geo",
     label: "GEO Score",
-    score: 62,
-    blurb: "Substantive content to surface, but still no Q&A or citations.",
+    score: 74,
+    blurb: "FAQPage Q&A is the highest-leverage format for generative engines.",
   },
 ];
 
 /** Signal-by-signal breakdown for the current version. */
 export const signals: { label: string; score: number }[] = [
   { label: "Descriptive title & meta description", score: 88 },
-  { label: "Structured data (JSON-LD / schema.org)", score: 70 },
+  { label: "Structured data (JSON-LD / schema.org)", score: 85 },
   { label: "Semantic HTML & heading outline", score: 85 },
   { label: "Named entities (org, people, product)", score: 58 },
-  { label: "Answer-shaped content (FAQ / Q&A)", score: 0 },
+  { label: "Answer-shaped content (FAQ / Q&A)", score: 85 },
   { label: "Open Graph & social metadata", score: 75 },
   { label: "Crawl directives (robots / sitemap / llms.txt)", score: 20 },
   { label: "Citations & external corroboration", score: 0 },
   { label: "Image alt text & captions", score: 5 },
-  { label: "Content depth & freshness", score: 55 },
+  { label: "Content depth & freshness", score: 70 },
 ];
 
 /** Forward-looking projection: one optimization added per version. */
