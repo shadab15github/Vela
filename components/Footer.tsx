@@ -15,6 +15,7 @@ const groups = [
     heading: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Blog", href: "/blog" },
       { label: "Contact", href: "mailto:hello@vela.com" },
     ],
   },

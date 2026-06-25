@@ -10,7 +10,7 @@ export type Metric = {
   blurb: string;
 };
 
-export const CURRENT_VERSION = "V11";
+export const CURRENT_VERSION = "V12";
 export const UPDATED = "June 24, 2026";
 
 /** The three headline scores for the current version. */
@@ -18,35 +18,35 @@ export const metrics: Metric[] = [
   {
     key: "crawlability",
     label: "AI Crawlability",
-    score: 91,
-    blurb: "Captions and aria-labels make the visual layer machine-readable.",
+    score: 95,
+    blurb: "Dated, authored articles add depth and fresh, indexable URLs.",
   },
   {
     key: "visibility",
     label: "LLM Visibility",
-    score: 84,
-    blurb: "A descriptive OG image and alt text give models more to anchor on.",
+    score: 90,
+    blurb: "Outbound citations and bylines let models corroborate and attribute.",
   },
   {
     key: "geo",
     label: "GEO Score",
-    score: 87,
-    blurb: "Described imagery rounds out the content for generative answers.",
+    score: 93,
+    blurb: "Authored, cited, fresh content is exactly what generative engines reward.",
   },
 ];
 
 /** Signal-by-signal breakdown for the current version. */
 export const signals: { label: string; score: number }[] = [
-  { label: "Descriptive title & meta description", score: 88 },
-  { label: "Structured data (JSON-LD / schema.org)", score: 88 },
-  { label: "Semantic HTML & heading outline", score: 85 },
-  { label: "Named entities (org, people, product)", score: 85 },
+  { label: "Descriptive title & meta description", score: 90 },
+  { label: "Structured data (JSON-LD / schema.org)", score: 92 },
+  { label: "Semantic HTML & heading outline", score: 88 },
+  { label: "Named entities (org, people, product)", score: 88 },
   { label: "Answer-shaped content (FAQ / Q&A)", score: 85 },
   { label: "Open Graph & social metadata", score: 90 },
-  { label: "Crawl directives (robots / sitemap / llms.txt)", score: 90 },
-  { label: "Citations & external corroboration", score: 0 },
+  { label: "Crawl directives (robots / sitemap / llms.txt)", score: 92 },
+  { label: "Citations & external corroboration", score: 80 },
   { label: "Image alt text & captions", score: 85 },
-  { label: "Content depth & freshness", score: 78 },
+  { label: "Content depth & freshness", score: 88 },
 ];
 
 /** Forward-looking projection: one optimization added per version. */

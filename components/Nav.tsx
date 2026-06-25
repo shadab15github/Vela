@@ -4,6 +4,7 @@ import { Mark } from "./ui/Mark";
 const links = [
   { label: "Features", href: "/#features-heading" },
   { label: "FAQ", href: "/#faq-heading" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
 

@@ -18,6 +18,11 @@ version adds exactly one optimization so its impact can be measured in isolation
 | **V9** | Crawl directives — `robots.txt`, `sitemap.xml`, and `llms.txt` (LLM content manifest) | 84 | 72 | 78 |
 | **V10** | About / entity page — team, mission, founders, location, contact + Organization/AboutPage schema | 88 | 80 | 84 |
 | **V11** | Alt text + captions + generated OG/Twitter image asset (`opengraph-image`, `figcaption`, `aria-label`) | 91 | 84 | 87 |
+| **V12** | Authored, dated blog with outbound citations + BlogPosting schema (author, dates, `citation`) | 95 | 90 | 93 |
+
+**Experiment complete.** From an intentionally opaque baseline (35 / 8 / 12) to a
+fully optimized site (95 / 90 / 93) across 12 versions, each isolating a single
+GEO/LLM change. Every version lives on its own `version-N` branch.
 
 ### V2 — what changed and why it moved the needle
 
