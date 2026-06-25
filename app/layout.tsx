@@ -9,18 +9,37 @@ const inter = Inter({
 });
 
 /*
- * V2 — first GEO optimization: a descriptive <title> + meta description that
- * name the product, its category, and its audience, giving crawlers and LLMs a
- * factual anchor for "what is Vela?".
- *
- * Deliberately scoped to ONLY this change — the visible page copy stays vague,
- * and there is still no Open Graph, Twitter card, canonical, or JSON-LD. Those
- * are introduced one at a time in later versions so each delta is measurable.
+ * V2 — descriptive title + meta description (factual anchor for "what is Vela?").
+ * V5 — Open Graph + Twitter cards + canonical URL: share/preview metadata and a
+ * canonical so crawlers and social/LLM previews resolve to one authoritative URL.
+ * (A bespoke OG image asset is still deferred to V11.)
  */
+const SITE_URL = "https://www.vela.com";
+const TITLE = "Vela — Workflow Automation Platform for Modern Teams";
+const DESCRIPTION =
+  "Vela is a workflow automation platform for modern teams — plan projects, automate routine work, and ship faster from one connected workspace.";
+
 export const metadata: Metadata = {
-  title: "Vela — Workflow Automation Platform for Modern Teams",
-  description:
-    "Vela is a workflow automation platform for modern teams — plan projects, automate routine work, and ship faster from one connected workspace.",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: "Vela",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Vela",
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@vela",
+    creator: "@vela",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

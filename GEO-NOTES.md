@@ -11,6 +11,7 @@ version adds exactly one optimization so its impact can be measured in isolation
 | **V2** | Descriptive `<title>` + meta description (names product, category, audience) | 42 | 16 | 20 |
 | **V3** | Concrete hero copy — H1/subhead plainly state what Vela is and who it's for | 48 | 26 | 30 |
 | **V4** | Semantic HTML — landmarks, single H1, complete H2/H3 outline, list & `dl` markup, skip link | 56 | 34 | 38 |
+| **V5** | Open Graph + Twitter cards + canonical URL (`metadataBase`, `alternates.canonical`) | 60 | 38 | 42 |
 
 ### V2 — what changed and why it moved the needle
 
