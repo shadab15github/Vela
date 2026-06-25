@@ -9,6 +9,7 @@ version adds exactly one optimization so its impact can be measured in isolation
 |---------|----------------|:-----:|:---:|:---:|
 | **V1** | Baseline (intentionally opaque) | 35 | 8 | 12 |
 | **V2** | Descriptive `<title>` + meta description (names product, category, audience) | 42 | 16 | 20 |
+| **V3** | Concrete hero copy — H1/subhead plainly state what Vela is and who it's for | 48 | 26 | 30 |
 
 ### V2 — what changed and why it moved the needle
 

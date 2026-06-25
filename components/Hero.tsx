@@ -13,24 +13,26 @@ export function Hero() {
 
       <Container className="pt-28 pb-24 sm:pt-36 sm:pb-32">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <Eyebrow>Now in motion</Eyebrow>
+          <Eyebrow>Workflow automation for modern teams</Eyebrow>
 
           <h1 className="mt-7 text-balance text-5xl font-semibold leading-[1.04] tracking-tight text-ink sm:text-6xl md:text-7xl">
-            Beyond the expected.
+            Automate the busywork. Ship the real work.
           </h1>
 
           <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-muted">
-            A different way forward — designed for what comes next, and built
-            around possibility.
+            Vela brings your projects, tasks, and tools into one workspace — and
+            automates the routine steps in between, so your team moves faster
+            with less manual effort.
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
-            <Button variant="primary">Begin</Button>
-            <Button variant="ghost">Explore</Button>
+            <Button variant="primary">Start for free</Button>
+            <Button variant="ghost">See how it works</Button>
           </div>
 
           <p className="mt-7 text-xs tracking-tight text-faint">
-            Quietly in progress, everywhere at once.
+            Set up your first automated workflow in minutes — no credit card
+            required.
           </p>
         </div>
       </Container>
