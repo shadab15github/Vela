@@ -4,8 +4,11 @@ import { Container } from "./ui/Container";
    surface inside is a shape or gradient — no labels, no readable UI. */
 export function Showcase() {
   return (
-    <section className="relative">
+    <section aria-labelledby="showcase-heading" className="relative">
       <Container className="pb-24 sm:pb-32">
+        <h2 id="showcase-heading" className="sr-only">
+          Inside the Vela workspace
+        </h2>
         <div className="relative mx-auto max-w-5xl">
           {/* soft glow behind the frame */}
           <div

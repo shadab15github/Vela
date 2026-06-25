@@ -3,7 +3,7 @@ import { Button } from "./ui/Button";
 
 export function CTA() {
   return (
-    <section className="border-t border-black/5">
+    <section aria-labelledby="cta-heading" className="border-t border-black/5">
       <Container className="py-24 sm:py-32">
         <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-ink px-8 py-16 text-center sm:px-16 sm:py-20">
           {/* decorative wash */}
@@ -16,7 +16,10 @@ export function CTA() {
             }}
           />
           <div className="relative mx-auto max-w-2xl">
-            <h2 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            <h2
+              id="cta-heading"
+              className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+            >
               Step into what comes next.
             </h2>
             <p className="mt-5 text-balance text-lg leading-relaxed text-white/65">

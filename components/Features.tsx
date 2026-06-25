@@ -13,10 +13,16 @@ const items = [
 
 export function Features() {
   return (
-    <section className="border-t border-black/5">
+    <section
+      aria-labelledby="features-heading"
+      className="border-t border-black/5"
+    >
       <Container className="py-24 sm:py-32">
         <div className="max-w-2xl">
-          <h2 className="text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+          <h2
+            id="features-heading"
+            className="text-balance text-3xl font-semibold tracking-tight text-ink sm:text-4xl"
+          >
             Built around possibility.
           </h2>
           <p className="mt-4 text-balance text-lg leading-relaxed text-muted">
@@ -25,9 +31,9 @@ export function Features() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-14 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
-            <div key={item.title} className="group">
+            <li key={item.title} className="group">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-black/10 bg-white text-ink/80 transition-colors group-hover:text-ink">
                 <Glyph name={item.glyph} />
               </div>
@@ -37,9 +43,9 @@ export function Features() {
               <p className="mt-2 text-[15px] leading-relaxed text-muted">
                 {item.body}
               </p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );
