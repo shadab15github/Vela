@@ -14,6 +14,7 @@ version adds exactly one optimization so its impact can be measured in isolation
 | **V5** | Open Graph + Twitter cards + canonical URL (`metadataBase`, `alternates.canonical`) | 60 | 38 | 42 |
 | **V6** | JSON-LD `@graph` — Organization + WebSite + SoftwareApplication entities | 68 | 48 | 54 |
 | **V7** | Real feature descriptions — concrete capabilities, named tools, and use cases | 72 | 56 | 62 |
+| **V8** | FAQ section + FAQPage schema — answer-shaped Q&A, fully crawlable via native `details` | 78 | 66 | 74 |
 
 ### V2 — what changed and why it moved the needle
 
