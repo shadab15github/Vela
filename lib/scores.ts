@@ -10,7 +10,7 @@ export type Metric = {
   blurb: string;
 };
 
-export const CURRENT_VERSION = "V2";
+export const CURRENT_VERSION = "V3";
 export const UPDATED = "June 24, 2026";
 
 /** The three headline scores for the current version. */
@@ -18,20 +18,20 @@ export const metrics: Metric[] = [
   {
     key: "crawlability",
     label: "AI Crawlability",
-    score: 42,
-    blurb: "Title and meta now describe the product, but the page is still thin.",
+    score: 48,
+    blurb: "The hero now states what Vela is and who it's for in plain text.",
   },
   {
     key: "visibility",
     label: "LLM Visibility",
-    score: 16,
-    blurb: "A name and category exist now — little else is quotable yet.",
+    score: 26,
+    blurb: "On-page copy is now quotable, though structure is still flat.",
   },
   {
     key: "geo",
     label: "GEO Score",
-    score: 20,
-    blurb: "Some context to surface, but no answer-shaped content or entities.",
+    score: 30,
+    blurb: "Clearer value prop to surface, but no Q&A, entities, or schema yet.",
   },
 ];
 
@@ -40,13 +40,13 @@ export const signals: { label: string; score: number }[] = [
   { label: "Descriptive title & meta description", score: 78 },
   { label: "Structured data (JSON-LD / schema.org)", score: 0 },
   { label: "Semantic HTML & heading outline", score: 25 },
-  { label: "Named entities (org, people, product)", score: 5 },
+  { label: "Named entities (org, people, product)", score: 28 },
   { label: "Answer-shaped content (FAQ / Q&A)", score: 0 },
   { label: "Open Graph & social metadata", score: 0 },
   { label: "Crawl directives (robots / sitemap / llms.txt)", score: 20 },
   { label: "Citations & external corroboration", score: 0 },
   { label: "Image alt text & captions", score: 5 },
-  { label: "Content depth & freshness", score: 8 },
+  { label: "Content depth & freshness", score: 32 },
 ];
 
 /** Forward-looking projection: one optimization added per version. */
