@@ -10,7 +10,7 @@ export type Metric = {
   blurb: string;
 };
 
-export const CURRENT_VERSION = "V3";
+export const CURRENT_VERSION = "V4";
 export const UPDATED = "June 24, 2026";
 
 /** The three headline scores for the current version. */
@@ -18,20 +18,20 @@ export const metrics: Metric[] = [
   {
     key: "crawlability",
     label: "AI Crawlability",
-    score: 48,
-    blurb: "The hero now states what Vela is and who it's for in plain text.",
+    score: 56,
+    blurb: "Semantic landmarks and a clean H1→H2→H3 outline now guide parsers.",
   },
   {
     key: "visibility",
     label: "LLM Visibility",
-    score: 26,
-    blurb: "On-page copy is now quotable, though structure is still flat.",
+    score: 34,
+    blurb: "Structure makes the copy easier to segment, attribute, and quote.",
   },
   {
     key: "geo",
     label: "GEO Score",
-    score: 30,
-    blurb: "Clearer value prop to surface, but no Q&A, entities, or schema yet.",
+    score: 38,
+    blurb: "Readable outline helps, but still no schema, Q&A, or entities.",
   },
 ];
 
@@ -39,7 +39,7 @@ export const metrics: Metric[] = [
 export const signals: { label: string; score: number }[] = [
   { label: "Descriptive title & meta description", score: 78 },
   { label: "Structured data (JSON-LD / schema.org)", score: 0 },
-  { label: "Semantic HTML & heading outline", score: 25 },
+  { label: "Semantic HTML & heading outline", score: 85 },
   { label: "Named entities (org, people, product)", score: 28 },
   { label: "Answer-shaped content (FAQ / Q&A)", score: 0 },
   { label: "Open Graph & social metadata", score: 0 },

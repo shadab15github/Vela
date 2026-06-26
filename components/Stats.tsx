@@ -10,20 +10,26 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="border-t border-black/5 bg-black/[0.015]">
+    <section
+      aria-labelledby="stats-heading"
+      className="border-t border-black/5 bg-black/[0.015]"
+    >
       <Container className="py-24 sm:py-28">
-        <div className="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-4">
+        <h2 id="stats-heading" className="sr-only">
+          Vela by the numbers
+        </h2>
+        <dl className="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-4">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center sm:text-left">
-              <div className="text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
+              <dd className="text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
                 {stat.value}
-              </div>
-              <div className="mt-3 text-sm tracking-tight text-muted">
+              </dd>
+              <dt className="mt-3 text-sm tracking-tight text-muted">
                 {stat.label}
-              </div>
+              </dt>
             </div>
           ))}
-        </div>
+        </dl>
       </Container>
     </section>
   );

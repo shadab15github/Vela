@@ -4,7 +4,10 @@ import { Eyebrow } from "./ui/Eyebrow";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section
+      aria-labelledby="hero-heading"
+      className="relative overflow-hidden"
+    >
       {/* decorative background — no content */}
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-grid" />
@@ -15,7 +18,10 @@ export function Hero() {
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <Eyebrow>Workflow automation for modern teams</Eyebrow>
 
-          <h1 className="mt-7 text-balance text-5xl font-semibold leading-[1.04] tracking-tight text-ink sm:text-6xl md:text-7xl">
+          <h1
+            id="hero-heading"
+            className="mt-7 text-balance text-5xl font-semibold leading-[1.04] tracking-tight text-ink sm:text-6xl md:text-7xl"
+          >
             Automate the busywork. Ship the real work.
           </h1>
 
