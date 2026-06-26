@@ -10,7 +10,7 @@ export type Metric = {
   blurb: string;
 };
 
-export const CURRENT_VERSION = "V5";
+export const CURRENT_VERSION = "V6";
 export const UPDATED = "June 24, 2026";
 
 /** The three headline scores for the current version. */
@@ -18,29 +18,29 @@ export const metrics: Metric[] = [
   {
     key: "crawlability",
     label: "AI Crawlability",
-    score: 60,
-    blurb: "Canonical URL plus OG/Twitter tags give crawlers clean previews.",
+    score: 68,
+    blurb: "Typed schema.org entities let crawlers parse Vela without guessing.",
   },
   {
     key: "visibility",
     label: "LLM Visibility",
-    score: 38,
-    blurb: "Share metadata adds a consistent, quotable summary off-page.",
+    score: 48,
+    blurb: "Organization, WebSite, and product are now machine-readable facts.",
   },
   {
     key: "geo",
     label: "GEO Score",
-    score: 42,
-    blurb: "Better previews, but the real lift still needs schema and Q&A.",
+    score: 54,
+    blurb: "Structured entities are strongly favored by generative engines.",
   },
 ];
 
 /** Signal-by-signal breakdown for the current version. */
 export const signals: { label: string; score: number }[] = [
   { label: "Descriptive title & meta description", score: 88 },
-  { label: "Structured data (JSON-LD / schema.org)", score: 0 },
+  { label: "Structured data (JSON-LD / schema.org)", score: 70 },
   { label: "Semantic HTML & heading outline", score: 85 },
-  { label: "Named entities (org, people, product)", score: 28 },
+  { label: "Named entities (org, people, product)", score: 50 },
   { label: "Answer-shaped content (FAQ / Q&A)", score: 0 },
   { label: "Open Graph & social metadata", score: 75 },
   { label: "Crawl directives (robots / sitemap / llms.txt)", score: 20 },
