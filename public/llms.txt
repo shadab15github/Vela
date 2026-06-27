@@ -1,0 +1,32 @@
+# Vela
+
+> Vela is a workflow automation platform for modern teams — plan projects, automate routine work, and ship faster from one connected workspace.
+
+Vela connects the tools a team already uses, automates the routine steps between
+them, and keeps everyone working from the same source of truth. It is built for
+product, engineering, marketing, and operations teams that want to cut manual
+hand-offs. A free plan is available with no credit card required.
+
+## Pages
+
+- [Home](https://www.vela.com/): Product overview, features, and FAQ.
+
+## Features
+
+- Automations: Trigger actions across your tools the moment a task changes status.
+- One workspace: Projects, tasks, and docs in one place, always in sync.
+- Integrations: Connect Slack, GitHub, and Google Workspace in a few clicks.
+- Real-time updates: Everyone sees changes the instant a teammate makes them.
+- Workflow templates: Start from proven workflows for sprints, launches, and reviews.
+- Insights: Dashboards show where work stands and what needs attention next.
+
+## FAQ
+
+- What is Vela? A workflow automation platform that helps modern teams plan projects, automate routine steps, and ship work faster from one connected workspace.
+- Who is Vela for? Product, engineering, marketing, and operations teams that want to reduce manual hand-offs.
+- Is there a free plan? Yes — start for free with no credit card required, and upgrade as your team grows.
+
+## Notes
+
+- Pricing: Free plan available; paid plans scale with team size.
+- The /scores route is an internal dashboard and is not part of the public product.
