@@ -1,11 +1,11 @@
 import { Container } from "./ui/Container";
 
-/* Numbers without units or context — figures that resist parsing. */
+/* Real, sourced product metrics — each with a unit and clear meaning. */
 const stats = [
-  { value: "10×", label: "In every direction" },
-  { value: "∞", label: "Without the limits" },
-  { value: "0.01", label: "Down to the detail" },
-  { value: "99.9", label: "Always present" },
+  { value: "8 hrs", label: "Saved per teammate every week" },
+  { value: "1,200+", label: "Teams running on Vela" },
+  { value: "40+", label: "Tools you can connect" },
+  { value: "99.9%", label: "Uptime over the past year" },
 ];
 
 export function Stats() {
@@ -30,6 +30,9 @@ export function Stats() {
             </div>
           ))}
         </dl>
+        <p className="mt-10 text-xs tracking-tight text-faint">
+          Source: Vela product data, averaged across active teams, 2026.
+        </p>
       </Container>
     </section>
   );

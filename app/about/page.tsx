@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/ui/Container";
+import { SITE_URL } from "@/lib/site";
 
 /*
  * V10 — About / entity page. The first real E-E-A-T + entity-graph content:
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   openGraph: {
     type: "website",
-    url: "https://www.vela.com/about",
+    url: `${SITE_URL}/about`,
     siteName: "Vela",
     title: "About Vela — Our team, mission, and company",
     description:
@@ -41,12 +42,13 @@ const facts = [
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  url: "https://www.vela.com/about",
+  url: `${SITE_URL}/about`,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
   mainEntity: {
     "@type": "Organization",
-    "@id": "https://www.vela.com/#organization",
+    "@id": `${SITE_URL}/#organization`,
     name: "Vela",
-    url: "https://www.vela.com",
+    url: SITE_URL,
     foundingDate: "2024",
     founders: founders.map((f) => ({ "@type": "Person", name: f.name })),
     numberOfEmployees: "30+",

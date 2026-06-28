@@ -57,9 +57,9 @@ export default function ScoresPage() {
               AI Discoverability Scoreboard
             </h1>
             <p className="mt-3 max-w-md text-[15px] leading-relaxed text-muted">
-              How readable this site is to AI search and LLMs. Version{" "}
-              {CURRENT_VERSION} is the deliberately weak baseline — every future
-              version adds one optimization.
+              How readable this site is to AI search and LLMs. Each version
+              isolates one GEO/LLM optimization so its impact can be measured —
+              from an opaque baseline to a fully optimized site.
             </p>
             <p className="mt-4 text-xs tracking-tight text-faint">
               Version {CURRENT_VERSION} · Updated {UPDATED}

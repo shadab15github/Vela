@@ -3,6 +3,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/ui/Container";
 import { posts } from "@/lib/posts";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Blog — Vela",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
   openGraph: {
     type: "website",
-    url: "https://www.vela.com/blog",
+    url: `${SITE_URL}/blog`,
     siteName: "Vela",
     title: "Blog — Vela",
     description:

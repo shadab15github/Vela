@@ -104,6 +104,44 @@ export const posts: Post[] = [
       },
     ],
   },
+  {
+    slug: "automating-without-losing-judgment",
+    title: "Automating workflows without losing human judgment",
+    description:
+      "Automation is at its best when it handles the routine and leaves the decisions to people. Here's where to draw the line.",
+    author: "Daniel Okafor",
+    authorRole: "Co-founder & CTO",
+    date: "2026-06-18",
+    updated: "2026-06-18",
+    dateLabel: "June 18, 2026",
+    readingTime: "5 min read",
+    body: [
+      {
+        heading: "Automate the rules, not the calls",
+        paragraphs: [
+          "A good rule of thumb: automate anything that follows a predictable rule, and keep a human in the loop wherever a judgment call is required. Status updates, notifications, and routing follow rules. Deciding whether work is actually done does not.",
+          "When teams automate the judgment calls too, they trade small time savings for larger trust problems — and quietly stop relying on the automation at all.",
+        ],
+      },
+      {
+        heading: "Design for visibility and reversibility",
+        paragraphs: [
+          "Every automated action should be easy to see and easy to undo. An activity feed that shows what ran, and a one-click way to reverse it, keeps people confident that automation is helping rather than hiding work.",
+          "Start narrow, make each rule observable, and expand only once the team trusts the ones already running.",
+        ],
+      },
+    ],
+    citations: [
+      {
+        label: "Nielsen Norman Group — automation and user control in UX",
+        href: "https://www.nngroup.com/articles/",
+      },
+      {
+        label: "MIT Sloan Management Review — humans and automation at work",
+        href: "https://sloanreview.mit.edu/",
+      },
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {

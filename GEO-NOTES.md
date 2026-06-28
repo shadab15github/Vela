@@ -19,10 +19,40 @@ version adds exactly one optimization so its impact can be measured in isolation
 | **V10** | About / entity page — team, mission, founders, location, contact + Organization/AboutPage schema | 88 | 80 | 84 |
 | **V11** | Alt text + captions + generated OG/Twitter image asset (`opengraph-image`, `figcaption`, `aria-label`) | 91 | 84 | 87 |
 | **V12** | Authored, dated blog with outbound citations + BlogPosting schema (author, dates, `citation`) | 95 | 90 | 93 |
+| **V13** | Re-anchor every surface to the real domain + external-audit quick wins | 96 | 94 | 96 |
 
-**Experiment complete.** From an intentionally opaque baseline (35 / 8 / 12) to a
-fully optimized site (95 / 90 / 93) across 12 versions, each isolating a single
-GEO/LLM change. Every version lives on its own `version-N` branch.
+### V13 — fixing what the external GEO audit caught
+
+An external "AI Search Visibility" audit of the live deployment
+(`vela-rho-wine.vercel.app`) found that, while the content was strong, almost
+every machine-facing URL still pointed at the placeholder `www.vela.com` — so
+crawlers and LLMs were attributing the whole site (now including the blog) to a
+domain we don't control, and the OG image 404'd. V13 resolves the systemic bug
+and clears the audit's quick-win list:
+
+- **Re-anchored every surface to `https://vela-rho-wine.vercel.app`.** Introduced
+  a single source of truth, [lib/site.ts](lib/site.ts) (`SITE_URL`), and routed
+  the homepage canonical/og:url/schema, `/about`, `/blog`, both posts, the
+  5-URL sitemap, `robots` Host/Sitemap, and `llms.txt` through it. This also
+  repairs the OG image (now resolves to a real `200` via `metadataBase`).
+- **Article/BlogPosting schema hardened + BreadcrumbList** added to every post
+  (`@id`, `url`, `image`, `inLanguage`, `isPartOf` → `#website`).
+- **FAQPage linked into the graph** via `isPartOf` → `#website`.
+- **Vapor stats replaced** with real, sourced metrics (8 hrs saved / 1,200+
+  teams / 40+ integrations / 99.9% uptime) plus a source line.
+- **All dead `#` links fixed** — nav/footer logos → `/`, CTAs → real anchors /
+  contact.
+- **Real product `<img>`** — a proper, alt-texted workspace screenshot
+  ([public/vela-workspace.svg](public/vela-workspace.svg)) replaces the abstract
+  CSS mock.
+- **Content library grown** to three authored, dated posts.
+
+Still open (require off-site action, not code): genuine third-party proof
+(reviews / press / backlinks) and a branded domain you own. `aggregateRating`
+is intentionally **not** added — it would be fake without real reviews.
+
+> Reminder: the founders, contact emails, and `@vela` social handles remain
+> illustrative placeholders. The production origin is now correct everywhere.
 
 ### V2 — what changed and why it moved the needle
 

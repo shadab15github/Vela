@@ -1,10 +1,12 @@
 import { Container } from "./ui/Container";
+import { SITE_URL } from "@/lib/site";
 
 /*
  * V8 — answer-shaped content. Plain question→answer pairs are the format
  * generative engines lift most readily, and the matching FAQPage schema makes
  * each Q&A a typed, extractable entity. Answers live in the DOM even when
  * collapsed (native <details>), so they stay fully crawlable with no JS.
+ * V13 — FAQPage now links into the site graph via isPartOf → #website.
  */
 const faqs = [
   {
@@ -36,6 +38,8 @@ const faqs = [
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": `${SITE_URL}/#faq`,
+  isPartOf: { "@id": `${SITE_URL}/#website` },
   mainEntity: faqs.map((f) => ({
     "@type": "Question",
     name: f.q,

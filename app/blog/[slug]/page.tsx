@@ -4,8 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Container } from "@/components/ui/Container";
 import { posts, getPost } from "@/lib/posts";
-
-const SITE_URL = "https://www.vela.com";
+import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -46,25 +45,48 @@ export default async function ArticlePage({
   const post = getPost(slug);
   if (!post) notFound();
 
+  const postUrl = `${SITE_URL}/blog/${post.slug}`;
   const schema = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.updated,
-    author: {
-      "@type": "Person",
-      name: post.author,
-      jobTitle: post.authorRole,
-    },
-    publisher: { "@id": `${SITE_URL}/#organization` },
-    citation: post.citations.map((c) => ({
-      "@type": "CreativeWork",
-      name: c.label,
-      url: c.href,
-    })),
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${postUrl}#article`,
+        mainEntityOfPage: postUrl,
+        url: postUrl,
+        headline: post.title,
+        description: post.description,
+        datePublished: post.date,
+        dateModified: post.updated,
+        inLanguage: "en-US",
+        image: `${SITE_URL}/opengraph-image`,
+        author: {
+          "@type": "Person",
+          name: post.author,
+          jobTitle: post.authorRole,
+        },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        citation: post.citations.map((c) => ({
+          "@type": "CreativeWork",
+          name: c.label,
+          url: c.href,
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Blog",
+            item: `${SITE_URL}/blog`,
+          },
+          { "@type": "ListItem", position: 3, name: post.title, item: postUrl },
+        ],
+      },
+    ],
   };
 
   return (

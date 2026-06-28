@@ -28,6 +28,7 @@ export function CTA() {
             <div className="mt-9 flex justify-center">
               <Button
                 variant="primary"
+                href="mailto:hello@vela.com?subject=Getting%20started%20with%20Vela"
                 className="bg-white text-ink hover:bg-white/90"
               >
                 Begin

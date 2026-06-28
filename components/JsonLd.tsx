@@ -4,7 +4,8 @@
  * so search engines and LLMs can resolve Vela as a typed entity rather than
  * inferring it from prose. Kept in sync with the metadata in app/layout.tsx.
  */
-const SITE_URL = "https://www.vela.com";
+import { SITE_URL } from "@/lib/site";
+
 const DESCRIPTION =
   "Vela is a workflow automation platform for modern teams — plan projects, automate routine work, and ship faster from one connected workspace.";
 

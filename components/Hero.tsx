@@ -32,8 +32,12 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
-            <Button variant="primary">Start for free</Button>
-            <Button variant="ghost">See how it works</Button>
+            <Button variant="primary" href="/#cta-heading">
+              Start for free
+            </Button>
+            <Button variant="ghost" href="/#features-heading">
+              See how it works
+            </Button>
           </div>
 
           <p className="mt-7 text-xs tracking-tight text-faint">

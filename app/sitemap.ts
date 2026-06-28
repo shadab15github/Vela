@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 import { posts } from "@/lib/posts";
+import { SITE_URL } from "@/lib/site";
 
 /*
  * V9 — sitemap so crawlers discover every indexable URL. Extended in V10
  * (/about) and V12 (/blog + each post) as those routes shipped.
+ * V13 — all <loc> entries now host-match the real origin (was www.vela.com).
  */
-const SITE_URL = "https://www.vela.com";
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date("2026-06-24");
 

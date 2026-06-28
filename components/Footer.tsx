@@ -35,7 +35,7 @@ export function Footer() {
       <Container className="py-16">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
           <div className="col-span-2 sm:col-span-1">
-            <a href="#" className="flex items-center gap-2.5">
+            <a href="/" className="flex items-center gap-2.5">
               <Mark />
               <span className="text-[15px] font-semibold tracking-tight text-ink">
                 Vela
