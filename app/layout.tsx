@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SiteJsonLd } from "@/components/JsonLd";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,7 +16,6 @@ const inter = Inter({
  * canonical so crawlers and social/LLM previews resolve to one authoritative URL.
  * (A bespoke OG image asset is still deferred to V11.)
  */
-const SITE_URL = "https://www.vela.com";
 const TITLE = "Vela — Workflow Automation Platform for Modern Teams";
 const DESCRIPTION =
   "Vela is a workflow automation platform for modern teams — plan projects, automate routine work, and ship faster from one connected workspace.";

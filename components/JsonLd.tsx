@@ -4,7 +4,8 @@
  * so search engines and LLMs can resolve Vela as a typed entity rather than
  * inferring it from prose. Kept in sync with the metadata in app/layout.tsx.
  */
-const SITE_URL = "https://www.vela.com";
+import { SITE_URL } from "@/lib/site";
+
 const DESCRIPTION =
   "Vela is a workflow automation platform for modern teams — plan projects, automate routine work, and ship faster from one connected workspace.";
 
@@ -18,6 +19,29 @@ const graph = {
       url: SITE_URL,
       description: "Maker of Vela, a workflow automation platform for teams.",
       slogan: "Automate the busywork. Ship the real work.",
+      foundingDate: "2024",
+      founders: [
+        { "@type": "Person", name: "Maya Chen" },
+        { "@type": "Person", name: "Daniel Okafor" },
+        { "@type": "Person", name: "Priya Nair" },
+      ],
+      numberOfEmployees: "30+",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "San Francisco",
+        addressRegion: "CA",
+        addressCountry: "US",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "hello@vela.com",
+      },
+      sameAs: [
+        "https://twitter.com/vela",
+        "https://www.linkedin.com/company/vela",
+        "https://github.com/vela",
+      ],
     },
     {
       "@type": "WebSite",

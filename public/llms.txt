@@ -9,7 +9,11 @@ hand-offs. A free plan is available with no credit card required.
 
 ## Pages
 
-- [Home](https://www.vela.com/): Product overview, features, and FAQ.
+- [Home](https://vela-rho-wine.vercel.app/): Product overview, features, and FAQ.
+- [About](https://vela-rho-wine.vercel.app/about): Team, mission, company facts, and contact.
+- [Blog](https://vela-rho-wine.vercel.app/blog): Authored articles on workflow automation and team coordination.
+- [Workflow automation saves teams hours](https://vela-rho-wine.vercel.app/blog/workflow-automation-saves-teams-hours)
+- [Building a single source of truth](https://vela-rho-wine.vercel.app/blog/single-source-of-truth-for-teams)
 
 ## Features
 
