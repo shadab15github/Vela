@@ -1,12 +1,11 @@
-# Vela — GEO / LLM Visibility Experiment (Version 1)
+# Vela — GEO / LLM Visibility Experiment (Version 14)
 
-A single-page Next.js site built as the **control group** for an AI-search /
-LLM-visibility experiment. Version 1 is intentionally **premium for humans** and
-**opaque to machines**: it looks like a polished SaaS landing page, but says
-almost nothing a crawler or LLM can extract, attribute, or summarize.
+A multi-page Next.js site for an AI-search / LLM-visibility experiment. The
+current version, V14, adds a crawlable glossary and `DefinedTermSet` schema so
+generative engines can resolve Vela's core workflow automation terminology.
 
-Each future version reintroduces *one* GEO/LLM optimization so the impact of that
-single change can be measured in isolation.
+Each version introduces a focused GEO/LLM optimization so the impact of that
+change can be measured against the intentionally weak V1 baseline.
 
 ## Stack
 
@@ -14,7 +13,8 @@ single change can be measured in isolation.
 - React 19
 - Tailwind CSS v4
 - TypeScript
-- No external UI libraries, no external images (all visuals are pure HTML/CSS/SVG)
+- No external UI libraries
+- Local SVG product asset and generated Open Graph/Twitter images
 
 ## Run
 
@@ -31,12 +31,21 @@ npm run build && npm run start   # production
 
 ```
 app/
-  layout.tsx        # minimal metadata (intentionally sparse)
-  page.tsx          # composes the six sections
+  layout.tsx        # shared metadata and site-wide JSON-LD
+  page.tsx          # product homepage
+  about/            # company/entity page
+  blog/             # authored content with citations
+  glossary/         # V14 DefinedTermSet page
+  scores/           # internal noindex visibility dashboard
   globals.css       # Tailwind v4 + design tokens
 components/
-  Nav, Hero, Showcase, Features, Stats, CTA, Footer
+  Nav, Hero, Showcase, Features, Stats, FAQ, CTA, Footer
   ui/               # Container, Button, Eyebrow, Glyph, Mark
+lib/
+  glossary.ts       # V14 glossary definitions
+  posts.ts          # blog source data
+  scores.ts         # experiment dashboard data
+  site.ts           # production origin helper
 ```
 
 See `GEO-NOTES.md` for the visibility scoring and the version-by-version

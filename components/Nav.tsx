@@ -4,6 +4,7 @@ import { Mark } from "./ui/Mark";
 const links = [
   { label: "Features", href: "/#features-heading" },
   { label: "FAQ", href: "/#faq-heading" },
+  { label: "Glossary", href: "/glossary" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
@@ -36,7 +37,7 @@ export function Nav() {
             href="/#cta-heading"
             className="inline-flex h-9 items-center justify-center rounded-full bg-ink px-4 text-sm font-medium tracking-tight text-white transition-colors hover:bg-ink/90"
           >
-            Enter
+            Start free
           </a>
         </div>
       </Container>

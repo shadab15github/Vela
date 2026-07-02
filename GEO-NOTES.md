@@ -20,6 +20,25 @@ version adds exactly one optimization so its impact can be measured in isolation
 | **V11** | Alt text + captions + generated OG/Twitter image asset (`opengraph-image`, `figcaption`, `aria-label`) | 91 | 84 | 87 |
 | **V12** | Authored, dated blog with outbound citations + BlogPosting schema (author, dates, `citation`) | 95 | 90 | 93 |
 | **V13** | Re-anchor every surface to the real domain + external-audit quick wins | 96 | 94 | 96 |
+| **V14** | Glossary page + DefinedTermSet schema for core workflow terms | 98 | 97 | 98 |
+
+### V14 - adding a typed terminology layer
+
+V14 adds a crawlable glossary for Vela's core workflow automation language. The
+goal is to give search engines and LLMs short, stable definitions they can quote,
+classify, and connect back to the product entity.
+
+- **New `/glossary` page** with semantic `dl` definitions for workflow
+  automation, automation rules, single source of truth, cross-tool sync,
+  workflow templates, and human-in-the-loop automation.
+- **DefinedTermSet JSON-LD** maps each definition to a stable `#term` URL and
+  links the glossary into the existing `#website` graph.
+- **Site entity enrichment** adds glossary terms to Organization `knowsAbout`
+  and SoftwareApplication `keywords`.
+- **Discovery wiring** adds the glossary to nav, footer, sitemap, and
+  `llms.txt`; the manifest also now lists the third blog post.
+- **Concrete CTA polish** replaces remaining abstract V1-era copy with a clear
+  contact action.
 
 ### V13 — fixing what the external GEO audit caught
 
@@ -32,8 +51,8 @@ and clears the audit's quick-win list:
 
 - **Re-anchored every surface to `https://vela-rho-wine.vercel.app`.** Introduced
   a single source of truth, [lib/site.ts](lib/site.ts) (`SITE_URL`), and routed
-  the homepage canonical/og:url/schema, `/about`, `/blog`, both posts, the
-  5-URL sitemap, `robots` Host/Sitemap, and `llms.txt` through it. This also
+  the homepage canonical/og:url/schema, `/about`, `/blog`, all posts, the
+  public sitemap, and `robots` Host/Sitemap through it. This also
   repairs the OG image (now resolves to a real `200` via `metadataBase`).
 - **Article/BlogPosting schema hardened + BreadcrumbList** added to every post
   (`@id`, `url`, `image`, `inLanguage`, `isPartOf` → `#website`).
@@ -130,5 +149,9 @@ delta to that single change.
   layer machine-readable.
 - **V12 — Outbound citations + authored, dated content (blog/docs).** Cross-linking
   and freshness signals that tie the site into the knowledge graph.
+- **V13 — Re-anchor to real domain + audit quick wins.** Centralize production
+  URLs, fix broken anchors, harden article schema, and repair social assets.
+- **V14 — Glossary + DefinedTermSet schema.** Add crawlable definitions for core
+  workflow automation terminology and link them into the entity graph.
 
 Track each version's three scores in a table here as you ship them.

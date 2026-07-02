@@ -4,6 +4,7 @@
  * so search engines and LLMs can resolve Vela as a typed entity rather than
  * inferring it from prose. Kept in sync with the metadata in app/layout.tsx.
  */
+import { glossaryTerms } from "@/lib/glossary";
 import { SITE_URL } from "@/lib/site";
 
 const DESCRIPTION =
@@ -19,6 +20,7 @@ const graph = {
       url: SITE_URL,
       description: "Maker of Vela, a workflow automation platform for teams.",
       slogan: "Automate the busywork. Ship the real work.",
+      knowsAbout: glossaryTerms.map((term) => term.term),
       foundingDate: "2024",
       founders: [
         { "@type": "Person", name: "Maya Chen" },
@@ -51,6 +53,7 @@ const graph = {
       description: DESCRIPTION,
       inLanguage: "en-US",
       publisher: { "@id": `${SITE_URL}/#organization` },
+      hasPart: [{ "@id": `${SITE_URL}/glossary#terms` }],
     },
     {
       "@type": "SoftwareApplication",
@@ -62,6 +65,7 @@ const graph = {
       operatingSystem: "Web",
       description: DESCRIPTION,
       publisher: { "@id": `${SITE_URL}/#organization` },
+      keywords: glossaryTerms.map((term) => term.term).join(", "),
       offers: {
         "@type": "Offer",
         price: "0",
