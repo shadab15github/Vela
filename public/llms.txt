@@ -11,9 +11,11 @@ hand-offs. A free plan is available with no credit card required.
 
 - [Home](https://vela-rho-wine.vercel.app/): Product overview, features, and FAQ.
 - [About](https://vela-rho-wine.vercel.app/about): Team, mission, company facts, and contact.
+- [Glossary](https://vela-rho-wine.vercel.app/glossary): Plain-English definitions for workflow automation terms used by Vela.
 - [Blog](https://vela-rho-wine.vercel.app/blog): Authored articles on workflow automation and team coordination.
 - [Workflow automation saves teams hours](https://vela-rho-wine.vercel.app/blog/workflow-automation-saves-teams-hours)
 - [Building a single source of truth](https://vela-rho-wine.vercel.app/blog/single-source-of-truth-for-teams)
+- [Automating workflows without losing human judgment](https://vela-rho-wine.vercel.app/blog/automating-without-losing-judgment)
 
 ## Features
 
@@ -23,6 +25,15 @@ hand-offs. A free plan is available with no credit card required.
 - Real-time updates: Everyone sees changes the instant a teammate makes them.
 - Workflow templates: Start from proven workflows for sprints, launches, and reviews.
 - Insights: Dashboards show where work stands and what needs attention next.
+
+## Glossary terms
+
+- Workflow automation: Rules and triggers that move routine work forward without manual hand-offs.
+- Automation rule: An if-this-then-that instruction that runs a specific action when a condition is met.
+- Single source of truth: A shared workspace where the current state of work is visible and consistent for the whole team.
+- Cross-tool sync: Updates related records in different apps when one system changes.
+- Workflow template: A reusable set of steps, roles, and automations for a repeated team process.
+- Human in the loop: Automation handles routine steps while people remain responsible for judgment and exceptions.
 
 ## FAQ
 

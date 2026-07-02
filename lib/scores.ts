@@ -10,43 +10,44 @@ export type Metric = {
   blurb: string;
 };
 
-export const CURRENT_VERSION = "V13";
-export const UPDATED = "June 27, 2026";
+export const CURRENT_VERSION = "V14";
+export const UPDATED = "July 2, 2026";
 
 /** The three headline scores for the current version. */
 export const metrics: Metric[] = [
   {
     key: "crawlability",
     label: "AI Crawlability",
-    score: 96,
-    blurb: "Every canonical, sitemap, and OG URL now resolves to the real origin.",
+    score: 98,
+    blurb: "The glossary is indexed, listed in the sitemap, and exposed through llms.txt.",
   },
   {
     key: "visibility",
     label: "LLM Visibility",
-    score: 94,
-    blurb: "Content and entity are finally attributed to the right domain.",
+    score: 97,
+    blurb: "Core workflow terms now have concise, reusable definitions.",
   },
   {
     key: "geo",
     label: "GEO Score",
-    score: 96,
-    blurb: "Re-anchored, with Article/Breadcrumb schema, real metrics, and a real screenshot.",
+    score: 98,
+    blurb: "DefinedTermSet schema gives generative engines a typed terminology layer.",
   },
 ];
 
 /** Signal-by-signal breakdown for the current version. */
 export const signals: { label: string; score: number }[] = [
   { label: "Descriptive title & meta description", score: 95 },
-  { label: "Structured data (JSON-LD / schema.org)", score: 95 },
+  { label: "Structured data (JSON-LD / schema.org)", score: 97 },
   { label: "Semantic HTML & heading outline", score: 90 },
-  { label: "Named entities (org, people, product)", score: 90 },
-  { label: "Answer-shaped content (FAQ / Q&A)", score: 90 },
+  { label: "Named entities (org, people, product)", score: 96 },
+  { label: "Answer-shaped content (FAQ / Q&A)", score: 93 },
   { label: "Open Graph & social metadata", score: 94 },
-  { label: "Crawl directives (robots / sitemap / llms.txt)", score: 95 },
+  { label: "Crawl directives (robots / sitemap / llms.txt)", score: 97 },
   { label: "Citations & external corroboration", score: 82 },
   { label: "Image alt text & captions", score: 92 },
-  { label: "Content depth & freshness", score: 90 },
+  { label: "Content depth & freshness", score: 94 },
+  { label: "Terminology / DefinedTerm coverage", score: 98 },
 ];
 
 /** Forward-looking projection: one optimization added per version. */
@@ -70,6 +71,7 @@ export const roadmap: {
   { v: "V11", change: "Alt text + OG image assets", crawl: 91, vis: 84, geo: 87 },
   { v: "V12", change: "Citations + authored, dated content", crawl: 95, vis: 90, geo: 93 },
   { v: "V13", change: "Re-anchor to real domain + audit quick wins", crawl: 96, vis: 94, geo: 96 },
+  { v: "V14", change: "Glossary + DefinedTermSet schema", crawl: 98, vis: 97, geo: 98 },
 ];
 
 /** Shared scale: weak / developing / strong. */

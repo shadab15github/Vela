@@ -1,8 +1,8 @@
 /*
  * V13 — single source of truth for the production origin.
  *
- * Every canonical, og:url, JSON-LD @id, sitemap <loc>, robots Host/Sitemap,
- * and llms.txt URL derives from this one constant. Centralizing it kills the
+ * Canonicals, og:url values, JSON-LD @ids, sitemap <loc> entries, and robots
+ * Host/Sitemap values derive from this one constant. Centralizing it kills the
  * recurring "anchored to the wrong domain" bug (www.vela.com) that the GEO
  * audit flagged from v2 through v12 — there is now exactly one place to change.
  */

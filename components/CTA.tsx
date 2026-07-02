@@ -20,10 +20,11 @@ export function CTA() {
               id="cta-heading"
               className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl"
             >
-              Step into what comes next.
+              Start automating your team's busywork.
             </h2>
             <p className="mt-5 text-balance text-lg leading-relaxed text-white/65">
-              No map required. Just begin.
+              Tell us your first workflow and we will help you connect the tools
+              around it.
             </p>
             <div className="mt-9 flex justify-center">
               <Button
@@ -31,7 +32,7 @@ export function CTA() {
                 href="mailto:hello@vela.com?subject=Getting%20started%20with%20Vela"
                 className="bg-white text-ink hover:bg-white/90"
               >
-                Begin
+                Contact Vela
               </Button>
             </div>
           </div>

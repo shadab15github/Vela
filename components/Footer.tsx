@@ -8,6 +8,7 @@ const groups = [
     links: [
       { label: "Features", href: "/#features-heading" },
       { label: "FAQ", href: "/#faq-heading" },
+      { label: "Glossary", href: "/glossary" },
       { label: "Get started", href: "/" },
     ],
   },
@@ -71,7 +72,7 @@ export function Footer() {
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-black/5 pt-8 sm:flex-row">
           <p className="text-xs tracking-tight text-faint">© 2026 Vela</p>
           <p className="text-xs tracking-tight text-faint">
-            Everywhere, and nowhere in particular.
+            San Francisco, CA · hello@vela.com
           </p>
         </div>
       </Container>
